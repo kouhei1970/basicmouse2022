@@ -3,6 +3,6 @@
 -nofpu
 -signed_char
 -lang=c99
--head=runtime,stdio,stdlib,string,new
+-head=runtime,mathf,stdio,stdlib,string,new
 -output="basicmouse2022.lib"
 -nologo

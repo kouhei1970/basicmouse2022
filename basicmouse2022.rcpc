@@ -49,6 +49,8 @@
         <Path>src\reset_program.c</Path>
         <Path>src\sbrk.c</Path>
         <Path>src\sbrk.h</Path>
+        <Path>src\search.c</Path>
+        <Path>src\search.h</Path>
         <Path>src\stacksct.h</Path>
         <Path>src\typedefine.h</Path>
         <Path>src\vect.h</Path>
@@ -108,7 +110,7 @@
           <Option>-nofpu</Option>
           <Option>-signed_char</Option>
           <Option>-lang=c99</Option>
-          <Option>-head=runtime,stdio,stdlib,string,new</Option>
+          <Option>-head=runtime,mathf,stdio,stdlib,string,new</Option>
           <Option>-output="${ProjName}.lib"</Option>
           <Option>-nologo</Option>
           <GenerateMode>BuildOptionChanged</GenerateMode>
@@ -136,6 +138,7 @@
           <Path>Debug\interrupt_handlers.obj</Path>
           <Path>Debug\reset_program.obj</Path>
           <Path>Debug\sbrk.obj</Path>
+          <Path>Debug\search.obj</Path>
           <Path>Debug\vector_table.obj</Path>
           <Path>Debug\xprintf.obj</Path>
           <Path>Debug\basicmouse2022.lib</Path>

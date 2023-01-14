@@ -27,6 +27,10 @@ void start_buzzer(short frequency, short time);
 void sound_buzzer(short frequency, short time);
 void buzzer_interrupt(void);
 void stop_buzzer(void);
-
+void level_up_buzzer(void);
+void hotel_buzzer(void);
+void church_save_buzzer(void);
+void coin_buzzer(void);
+void pipo_buzzer(void);
 
 #endif /* BUZZER_H_ */

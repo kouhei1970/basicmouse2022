@@ -19,15 +19,11 @@ short	wall_gain;				//壁制御ゲイン
 //台形加減速を行う
 void control_speed(void)
 {
-	static short olderr=0;
-	static short derr[4];
-	static char w_counter=0;
 	//速度制御フラグが0ならリターン
 	if(!speed_control_en){return;}
 
 	//加速度は常に正にする
 	acceleration = my_abs(acceleration);
-
 	//台形加速
 	if(now_speed < target_speed){
 		now_speed += acceleration;
@@ -43,34 +39,44 @@ void control_speed(void)
 		}
 	}
 
-	now_speed_l = now_speed_r = now_speed;
 
-	short wall_err;
-	short u;
+	short wall_diff;
 
 	switch(run_mode){
 	case STRAIGHT://直進
+		now_speed_l = now_speed_r = now_speed;
 		//壁制御
-		wall_err = get_wall_diff();
-		derr[w_counter]=wall_err - olderr;
-		olderr=wall_err;
-		w_counter++;
-		w_counter&=3;
-
-		u = (wall_err * wall_gain + 100*(derr[0]+derr[1]+derr[2]+derr[3])/4)/ 100;
-		now_speed_l += u;
-		now_speed_r -= u;
+		wall_diff = get_wall_diff() * wall_gain / 100;
+		now_speed_l += wall_diff;
+		now_speed_r -= wall_diff;
+		break;
+	case STRAIGHT_DIAG://斜め直進
+		now_speed_l = now_speed_r = now_speed;
+		//壁制御
+		wall_diff = get_wall_diff_diag() * wall_gain / 100;
+		now_speed_l += wall_diff;
+		now_speed_r -= wall_diff;
+		break;
+	case SLALOM://スラローム
+		if(turn_dir == 1){
+			now_speed_l -= acceleration;
+			now_speed_r += acceleration;
+		}
+		else if(turn_dir == -1){
+			now_speed_l += acceleration;
+			now_speed_r -= acceleration;
+		}
+		else if (turn_dir == 0){
+		    now_speed_l = 1*now_speed_l;
+		    now_speed_r = 1*now_speed_r;
+		}
 		break;
 	case TURN://その場ターン
-		derr[0]=0;
-		derr[1]=0;
-		derr[2]=0;
-		derr[3]=0;
+		now_speed_l = now_speed_r = now_speed;
 		if(turn_dir == 1)		{now_speed_l = -now_speed_l;}
 		else if(turn_dir == -1)	{now_speed_r = -now_speed_r;}
 		break;
 	}
-
 	change_motor_speed(now_speed_l, now_speed_r);
 }
 

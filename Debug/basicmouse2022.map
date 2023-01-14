@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.03.00 )             14-Jan-2023 10:52:29
+Renesas Optimizing Linker (W3.03.00 )             14-Jan-2023 12:21:07
 
 *** Options ***
 
@@ -27,6 +27,7 @@ Renesas Optimizing Linker (W3.03.00 )             14-Jan-2023 10:52:29
 -input=".\src\interrupt_handlers.obj"
 -input=".\src\reset_program.obj"
 -input=".\src\sbrk.obj"
+-input=".\src\search.obj"
 -input=".\src\vector_table.obj"
 -input=".\src\xprintf.obj"
 -library=".\basicmouse2022.lib"
@@ -50,17 +51,17 @@ SU
 SI
                                   00000104  00000403       300   4
 B_1
-                                  00000404  00000511       10e   1
+                                  00000404  00000611       20e   1
 R_1
-                                  00000512  00000718       207   1
+                                  00000612  00000617         6   1
 B_2
-                                  0000071a  00000743        2a   2
+                                  00000618  0000063d        26   2
 R_2
-                                  00000744  00000751         e   2
+                                  0000063e  00000649         c   2
 B
-                                  00000754  00003a5f      330c   4
+                                  0000064c  00003957      330c   4
 R
-                                  00003a60  00003a63         4   4
+                                  00003958  0000395b         4   4
 PResetPRG
                                   fffc0000  fffc002d        2e   1
 C_1
@@ -80,22 +81,22 @@ C$VECT
 C$VTBL
                                   fffc04c0  fffc04c0         0   1
 D_2
-                                  fffc04c0  fffc04cd         e   2
+                                  fffc04c0  fffc04cb         c   2
 D_1
-                                  fffc04ce  fffc06d4       207   1
+                                  fffc04cc  fffc04d1         6   1
 D
-                                  fffc06d8  fffc06db         4   4
+                                  fffc04d4  fffc04d7         4   4
 W
-                                  fffc06dc  fffc06dc         0   4
+                                  fffc04d8  fffc04d8         0   4
 W_1
-                                  fffc06dc  fffc06eb        10   1
+                                  fffc04d8  fffc04e7        10   1
 W_2
-                                  fffc06ec  fffc06ec         0   2
+                                  fffc04e8  fffc04e8         0   2
 L
-                                  fffc06ec  fffc07ed       102   4
+                                  fffc04e8  fffc0e7d       996   4
 PIntPRG
-                                  fffc07ee  fffc090e       121   1
+                                  fffc0e7e  fffc0f9e       121   1
 P
-                                  fffc090f  fffc3025      2717   1
+                                  fffc0f9f  fffc4539      359b   1
 FIXEDVECT
                                   ffffff80  ffffffff        80   4

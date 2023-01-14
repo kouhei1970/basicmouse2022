@@ -15,10 +15,12 @@ extern short	sensor_rs;
 extern short	sensor_rf;
 extern short	ref_ls;
 extern short	ref_rs;
-extern char		wall_lf;
-extern char		wall_ls;
-extern char		wall_rs;
-extern char		wall_rf;
+extern short	ref_lf;
+extern short	ref_rf;
+extern volatile char		wall_lf;
+extern volatile char		wall_ls;
+extern volatile char		wall_rs;
+extern volatile char		wall_rf;
 extern short	thre_lf;
 extern short	thre_ls;
 extern short	thre_rs;
@@ -29,6 +31,7 @@ void update_wall_sensor(char sensor, char led);
 short get_wall_diff(void);
 void update_center_ref(void);
 void output_wall_sensor(void);
+short get_range(void);
 
 
 #endif /* WALL_SENSOR_H_ */
