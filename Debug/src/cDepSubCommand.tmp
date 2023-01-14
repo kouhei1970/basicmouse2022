@@ -1,0 +1,13 @@
+-MM
+-MP
+-isa=rxv1
+-nofpu
+-signed_char
+-include="C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RX\V3.03.00\include"
+-include="C:\Users\kouhei\e2_studio\workspace\basicmouse2022\generate" 
+-lang=c99
+-utf8
+-nomessage
+-debug
+-outcode=utf8
+-nologo

@@ -1,0 +1,8 @@
+-MAKEUD_LBG="C:\Users\kouhei\e2_studio\workspace\Micromouse2\Debug\\Micromouse2_lbg.ud"
+-isa=rxv1
+-nofpu
+-signed_char
+-lang=c99
+-head=runtime,stdio,stdlib,string,new
+-output="Micromouse2.lib"
+-nologo

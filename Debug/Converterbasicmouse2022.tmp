@@ -1,0 +1,8 @@
+-MAKEUD=C:\Users\kouhei\e2_studio\workspace\basicmouse2022\Debug\\basicmouse2022_c.ud
+-input="basicmouse2022.abs"
+-form=stype
+-output="basicmouse2022.mot"
+-byte_count=10
+-nologo
+-nomessage
+-exit

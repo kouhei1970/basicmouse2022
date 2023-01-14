@@ -1,0 +1,101 @@
+Renesas Optimizing Linker (W3.03.00 )             14-Jan-2023 10:52:29
+
+*** Options ***
+
+-subcommand=Linkerbasicmouse2022.tmp
+-MAKEUD=C:\Users\kouhei\e2_studio\workspace\basicmouse2022\Debug/basicmouse2022_l.ud
+-noprelink
+-input=".\src\ADC.obj"
+-input=".\src\Battery.obj"
+-input=".\src\Buzzer.obj"
+-input=".\src\Clock.obj"
+-input=".\src\Control.obj"
+-input=".\src\E2Flash_RX220.obj"
+-input=".\src\Interrupt.obj"
+-input=".\src\Log.obj"
+-input=".\src\Map.obj"
+-input=".\src\Motor.obj"
+-input=".\src\My_Func.obj"
+-input=".\src\New_Basic_Mouse2.obj"
+-input=".\src\Run.obj"
+-input=".\src\SCI.obj"
+-input=".\src\UI.obj"
+-input=".\src\Wait.obj"
+-input=".\src\Wall_Sensor.obj"
+-input=".\src\dbsct.obj"
+-input=".\src\hardware_setup.obj"
+-input=".\src\interrupt_handlers.obj"
+-input=".\src\reset_program.obj"
+-input=".\src\sbrk.obj"
+-input=".\src\vector_table.obj"
+-input=".\src\xprintf.obj"
+-library=".\basicmouse2022.lib"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFFC0000,FIXEDVECT/0FFFFFF80
+-output="basicmouse2022.abs"
+-form=absolute
+-nomessage
+-list=basicmouse2022.map
+-nooptimize
+-rom=D=R,D_1=R_1,D_2=R_2
+-cpu=RAM=00000000-00003fff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0008dfff,FIX=00090000-0009ffff,FIX=000a0000-000bffff,FIX=000c0000-000fffff,ROM=00100000-00101fff,FIX=007fc000-007fc4ff,FIX=007ffc00-007fffff,ROM=fffc0000-ffffffff
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  00000511       10e   1
+R_1
+                                  00000512  00000718       207   1
+B_2
+                                  0000071a  00000743        2a   2
+R_2
+                                  00000744  00000751         e   2
+B
+                                  00000754  00003a5f      330c   4
+R
+                                  00003a60  00003a63         4   4
+PResetPRG
+                                  fffc0000  fffc002d        2e   1
+C_1
+                                  fffc002e  fffc002e         0   1
+C_2
+                                  fffc002e  fffc004f        22   2
+C
+                                  fffc0050  fffc0083        34   4
+C$DSEC
+                                  fffc0084  fffc00a7        24   4
+C$BSEC
+                                  fffc00a8  fffc00bf        18   4
+C$INIT
+                                  fffc00c0  fffc00c0         0   1
+C$VECT
+                                  fffc00c0  fffc04bf       400   4
+C$VTBL
+                                  fffc04c0  fffc04c0         0   1
+D_2
+                                  fffc04c0  fffc04cd         e   2
+D_1
+                                  fffc04ce  fffc06d4       207   1
+D
+                                  fffc06d8  fffc06db         4   4
+W
+                                  fffc06dc  fffc06dc         0   4
+W_1
+                                  fffc06dc  fffc06eb        10   1
+W_2
+                                  fffc06ec  fffc06ec         0   2
+L
+                                  fffc06ec  fffc07ed       102   4
+PIntPRG
+                                  fffc07ee  fffc090e       121   1
+P
+                                  fffc090f  fffc3025      2717   1
+FIXEDVECT
+                                  ffffff80  ffffffff        80   4

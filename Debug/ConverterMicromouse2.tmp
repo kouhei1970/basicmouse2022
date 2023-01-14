@@ -1,0 +1,8 @@
+-MAKEUD=C:\Users\kouhei\e2_studio\workspace\Micromouse2\Debug\\Micromouse2_c.ud
+-input="Micromouse2.abs"
+-form=stype
+-output="Micromouse2.mot"
+-byte_count=10
+-nologo
+-nomessage
+-exit

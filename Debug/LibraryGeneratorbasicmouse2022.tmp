@@ -1,0 +1,8 @@
+-MAKEUD_LBG="C:\Users\kouhei\e2_studio\workspace\basicmouse2022\Debug\\basicmouse2022_lbg.ud"
+-isa=rxv1
+-nofpu
+-signed_char
+-lang=c99
+-head=runtime,stdio,stdlib,string,new
+-output="basicmouse2022.lib"
+-nologo
